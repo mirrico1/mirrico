@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./choices.min.css">
+    <script src="choices.min.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/RobinHerbots/Inputmask@5.0.3/dist/jquery.inputmask.min.js"></script>
+    <script defer src="https://unpkg.com/imask"></script>
+    <script src="mask.js" defer></script>
+    <script src="main.js" defer></script>
+    <script src="showfield.js" defer></script>
+    <script src="select.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div class="top">
+            <div class="container">
+                <div class="header">
+                    <img class="header__logo" src="./images/logo.svg" alt="logo">
+                    <div class="header__input-box">
+                        <input placeholder="Поиск" class="header__input" type="text">
+                        <button class="header__button-search">
+                            <img src="./images/searchButton.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="header__language-container">
+                        <a href="" class="header__language-box">Ру</a>
+                        <a href="" class="header__language-box">En</a>
+                    </div>
+                    <div class="header__menu-box">
+                        <p class="header__menu-name">Меню</p>
+                        <div class="header__menu-button-box">
+                            <img src="./images/threeLines.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="header_bottom">
+                    <p class="header_bottom__name">подать идею</p>
+                    <div class="header_bottom__line">
+                        <div class="header_bottom__line-box">
+                            <div class="header_bottom__line-bols"></div>
+                            <div class="header_bottom__line-bols"></div>
+                        </div>
+                    </div>
+                    <div class="header_bottom__choice">
+                        <p class="header_bottom__choice-name">КАТАЛОГ ИННОВАЦИОННЫХ РАЗРАБОТОК</p>
+                        <p class="header_bottom__choice-name">ЛАБОРАТОРНЫЙ КОМПЛЕКС</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="container">
+                <div class="main__pagination">
+                    <a href="" class="main__pagination-link">Главная</a>
+                    <img class="main__pagination-arrow" src="./images/paginationArrow.svg" alt="">
+                    <a href="" class="main__pagination-link">Иновации</a>
+                    <img class="main__pagination-arrow" src="./images/paginationArrow.svg" alt="">
+                    <a href="" class="main__pagination-link">Подать идею</a>
+                </div>
+                <div class="main__box">
+                    <div class="main__menu">
+                        <button class="main__menu-button" id="0">
+                            <div class="main__menu-button-number main__menu-button-number_active"><p class="main__menu-button-number-text">1</p></div>
+                            <p class="main__menu-button-name main__menu-button-name-active">Персональные данные </p>
+                        </button>
+                        <button class="main__menu-button" id="1">
+                            <div class="main__menu-button-number"><p class="main__menu-button-number-text">2</p></div>
+                            <p class="main__menu-button-name">Варианты сотрудничества</p>
+                        </button>
+                        <button class="main__menu-button" id="2">
+                            <div class="main__menu-button-number"><p class="main__menu-button-number-text">3</p></div>
+                            <p class="main__menu-button-name">Информация
+                                по предложению</p>
+                        </button>
+                        <button class="main__menu-button" id="3">
+                            <div class="main__menu-button-number"><p class="main__menu-button-number-text">4</p></div>
+                            <p class="main__menu-button-name">Финансовые показатели</p>
+                        </button>
+                        <button class="main__menu-button" id="4">
+                            <div class="main__menu-button-number"><p class="main__menu-button-number-text">5</p></div>
+                            <p class="main__menu-button-name">Рынок</p>
+                        </button>
+                    </div>
+                    <form action="" class="main__form-box main__form-box-relative" name="form" id="0">
+                        <p class="main__form-heading">1. ВАШИ ПЕРСОНАЛЬНЫЕ ДАННЫЕ</p>
+                        <p class="main__form1-description">Для подачи заявки заполните форму и наши менеджеры свяжутся с вами в течение рабочего дня.</p>
+                        <a href="" class="main__form-criteria main__form-criteria_2">Первичные критерии отбора</a>
+                        <p class="main__form-subtitle">ФИО</p>
+                        <input autofocus placeholder="Иванов Иван Иванович" type="text" class="main__form-input">
+                        <p class="main__form-subtitle">Мобильный телефон</p>
+                        <input placeholder="+7(895) 343-34-56" id="phone-mask" type="text" class="main__form-input">
+                        <p class="main__form-subtitle">Электронная почта</p>
+                        <input id="mailSecond" placeholder="ivanivanovich@mail.ru" type="text" class="main__form-input main__form-input_last">
+                        <button class="main__form-submit-button" id="0">ДАЛЕЕ</button>
+                        <a href="" class="main__form-criteria">Первичные критерии отбора</a>
+                    </form>
+                    <form action="" class="main__form-box_2 main__form-box display-none" name="form" id="1">
+                        <p class=" main__form-heading">2. ВАРИАНТЫ СОТРУДНИЧЕСТВА</p>
+                        <select name="" id="0" class="default">
+                            <option value="">Поиск инвестиций (средства на развитие)</option>
+                            <option value="0">Предоставление продуктов для использования на условиях роялти</option>
+                            <option value="1">Продажа проекта/технологии</option>
+                            <option value="2">Поиск инвестиций (средства на развитие)</option>
+                            <option value="3">Поиск нефинансовых ресурсов (компетенций)</option>
+                        </select>
+                       <div class="selection_box display-none">
+                            <p class="main__form-subtitle">Область компетенций</p>
+                            <select name="" id="1" class="default">
+                                <option value="">Производственные услуги (производство продукта, логистика)</option>
+                                <option value="1">индустриальный партнер в получении финансирования от государства (составление бизнес-плана)</option>
+                                <option value="2">сервис (ОПИ, сопровождение)</option>
+                                <option value="3">каналы продаж</option>
+                                <option value="4">лабораторная база (отраслевые испытания, масштабирование, аналитика и составление методик тестирования / определения продукта)</option>
+                            </select> 
+                       </div>                       
+                        <p class="main__form-subtitle">Другое</p>
+                        <input placeholder="Введите свой вариант сотрудничества" type="text" class="main__form-input main__form-input_last">
+                        <button class="main__form-submit-button" id="1">ДАЛЕЕ</button>
+                    </form>
+                    <form action="" class="main__form-box display-none" name="form" id="2">
+                        <p class="main__form-heading_2 main__form-heading">3. Информация по предложению</p> 
+                        <p class="main__form-subtitle">Краткое наименование предложения</p>
+                        <textarea autofocus placeholder="Организация производства биоэтанола в качестве антидетонационной присадки" class="main__form-textarea main__form-textarea_3"></textarea>
+                        <p class="main__form-subtitle">Опишите предлагаемое решение</p>
+                        <textarea placeholder="Подробно опишите суть предлагаемого решения, укажите на решение каких задач оно направлено" class="main__form-textarea"></textarea>
+                        <p class="main__form-question-name">Стадия идеи</p>
+                        <label class="main__form-idea-checkbox-container">
+                            <input class="main__submition-radio-input" name="check" type="radio">
+                            <span class="main__submition-radio-tick"></span>
+                            <p class="main__form-idea-checkbox-name">НИОКР</p>
+                        </label>
+                        <label class="main__form-idea-checkbox-container">
+                            <input class="main__submition-radio-input" name="check" type="radio">
+                            <span class="main__submition-radio-tick"></span>
+                            <p class="main__form-idea-checkbox-name">Завершенного НИОКР (лабораторный образец, прототип)</p>
+                        </label>
+                        <label class="main__form-idea-checkbox-container">
+                            <input class="main__submition-radio-input" name="check" type="radio">
+                            <span class="main__submition-radio-tick"></span>
+                            <p class="main__form-idea-checkbox-name">ПИ или испытания модели</p>
+                        </label>
+                        <label class="main__form-idea-checkbox-container main__form-idea-checkbox-container_2">
+                            <input class="main__submition-radio-input" name="check" type="radio">
+                            <span class="main__submition-radio-tick"></span>
+                            <p class="main__form-idea-checkbox-name">Продажи/стадия наращения мощности производства</p>
+                        </label>
+                        <p class="main__form-subtitle main__form-subtitle_2">Уровень готовности технологии</p>
+                        <select name="" id="0" class="default">
+                            <option value="">Основные принципы технологии изучены и опубликованы</option>
+                            <option value="1">УГТ1: Основные принципы технологии изучены и опубликованы;</option>
+                            <option value="2">УГТ2: Концепция технологии и/или ее применения сформулированы;</option>
+                            <option value="3">УГТ3: Критические функции и/или характеристики подтверждены аналитическим и экспериментальным путем;</option>
+                            <option value="4">УГТ4: Компонент и/или макет испытаны в лабораторном окружении;</option>
+                            <option value="5">УГТ5: Компонент и/или макет испытаны в окружении, близком к реальному;</option>
+                            <option value="6">УГТ6: Модель системы/подсистемы или прототип продемонстрированы в окружении, близком к реальному;</option>
+                            <option value="7">УГТ7: Прототип системы продемонстрирован в условиях эксплуатации;</option>
+                            <option value="8">УГТ8: Реальная система завершена и квалифицирована в ходе испытаний и демонстрации;</option>
+                            <option value="9">УГТ9: Реальная система подтверждена путем успешной эксплуатации (достижения цели).</option>
+                        </select>
+                        <p class="main__form-subtitle main__form-subtitle_3">Наличие объектов интеллектуальной собственности (патенты, свидетельства)</p>
+                        <div class="main__switch-box">
+                            <p class="main__switch-text">Нет</p>
+                            <label class="switch main__switch">
+                                <input type="checkbox" name="switch" id="0">
+                                <span class="slider round"></span>
+                            </label>
+                            <p class="main__switch-text">Да</p>
+                        </div>
+                        <div class="main_show-box display-none">
+                            <p class="main__form-subtitle">Номер заявки/патента/свидетельства</p>
+                            <input placeholder="" type="text" class="main__form-input main__form-input_2">
+                        </div>
+                        <p class="main__form-subtitle main__form-subtitle_2">Законтрактованность</p>
+                        <select name="" id="0" class="default">
+                            <option value="">Нет заключенных контрактов</option>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                        </select>
+                        
+                        <button class="main__form-submit-button" id="2">ДАЛЕЕ</button>
+                    </form>
+                    <form action="" class="main__form-box display-none" name="form" id="3">
+                        <p class="main__form-heading_2 main__form-heading">4. ФИНАНСОВЫЕ ПОКАЗАТЕЛИ</p>
+                        <p class="main__form-subtitle">Экономический эффект, млн руб.</p>
+                        <input autofocus type="text" class="main__form-input">
+                        <p class="main__form-subtitle">За счет чего достигается экономический эффект</p>
+                        <input type="text" class="main__form-input">
+                        <p class="main__form-subtitle">Размер инвестиций в производство, млн руб.</p>
+                        <input type="text" class="main__form-input">
+                        <p class="main__form-subtitle">Размер инвестиций в НИОКР, млн руб.</p>
+                        <input type="text" class="main__form-input">
+                        <p class="main__form-subtitle">Потенциальный годовой размер прибыли, млн руб.</p>
+                        <input type="text" class="main__form-input">
+                        <p class="main__form-subtitle">Срок окупаемости проекта, год</p>
+                        <input type="text" class="main__form-input">
+                        <p class="main__form-subtitle">Рентабельность, %</p>
+                        <input type="text" class="main__form-input main__form-input_last">
+                        <button class="main__form-submit-button" id="3">ДАЛЕЕ</button>
+                    </form>
+                    <form action="" class="main__form-box display-none" name="form" id="4">
+                        <p class="main__form-heading_2 main__form-heading">5. РЫНОК</p>
+                        <p class="main__form-subtitle">Емкость рынка, млн руб.</p>
+                        <input autofocus placeholder="" type="text" class="main__form-input main__form-input_2">
+                        <p class="main__form-subtitle">Перечень отраслей применения в порядке приоритетности
+                            (доля использования продукта по отраслям)</p>
+                        <input placeholder="" type="text" class="main__form-input main__form-input_last">
+                        <a href="" class="main__form-link-box">
+                            <img src="./images/form4Link.svg" alt="" class="main__form-link-img">
+                            <p class="main__form-link-name">Выбрать файл</p>
+                        </a>
+                        <p class="main__form-subtitle main__form-subtitle_4">Имеются ли аналоги</p>
+                        <div class="main__switch-box main__switch-box_2">
+                            <p class="main__switch-text">Нет</p>
+                            <label class="switch main__switch">
+                                <input type="checkbox" name="switch" id="1">
+                                <span class="slider round"></span>
+                            </label>
+                            <p class="main__switch-text">Да</p>
+                        </div>
+                        <div class="main_show-box display-none">
+                            <p class="main__form-subtitle main__form-subtitle_2">Предоставьте сравнительную таблицу аналогов продуктов/услуг
+                                (в том числе зарубежных)</p>
+                            <textarea placeholder="Наименование продукта, компания-производитель, ссылка на сайт, сравнительные характеристики" class="main__form-textarea main__form-textarea_2"></textarea>
+                            <a href="" class="main__form-link-box">
+                                <img src="./images/form4Link.svg" alt="" class="main__form-link-img">
+                                <p class="main__form-link-name">Выбрать файл</p>
+                            </a>
+                        </div>
+                        <p class="main__form-subtitle main__form-subtitle_2">Имеются ли готовые аналитических исследования? Проводились своими силами или сторонними агентствами?</p>
+                        <textarea placeholder="При возможности предоставьте отчёты" class="main__form-textarea main__form-textarea_2"></textarea>
+                        <div class="main__form-link-container">
+                            <a href="" class="main__form-link-box main__form-link-box_3">
+                                <img src="./images/form4Link.svg" alt="" class="main__form-link-img">
+                                <p class="main__form-link-name">Выбрать файл</p>
+                            </a>
+                        </div>
+                        <div class="main__submition-box main__submition-box_main">
+                            <button class="main__form-main-submit-button main__form-main-submit-button_2">Отправить заявку</button>
+                            <label class="main__submition-checkbox-box">
+                                <input class="main__submition-checkbox" type="checkbox">
+                                <span class="main__submition-tick"></span>
+                                <p class="main__submition-checkbox-text">
+                                    Я подтверждаю, что ознакомлен и согласен
+                                    <a class="main__submition-checkbox-link">с условиями направления заявления</a>
+                            </label>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer__container">
+            <img class="footer_icon" src="./images/footerIcon.png" alt="">
+            <nav class="footer__navigation">
+                <a href="" class="footer__links-container">
+                    <p class="footer__links" >Главная</p>
+                    <div class="footer__links-line"></div>
+                </a>
+                <a href="" class="footer__links-container">
+                    <p class="footer__links" >О Миррико</p>
+                    <div class="footer__links-line"></div>
+                </a>
+                <a href="" class="footer__links-container">
+                    <p class="footer__links" >Услуги и продукты</p>
+                    <div class="footer__links-line"></div>
+                </a>
+                <a href="" class="footer__links-container">
+                    <p class="footer__links" >Инновации</p>
+                    <div class="footer__links-line"></div>
+                </a>
+                <a href="" class="footer__links-container">
+                    <p class="footer__links" >Устойчивость и качество</p>
+                    <div class="footer__links-line"></div>
+                </a>
+                <a href="" class="footer__links-container">
+                    <p class="footer__links" >Пресс-центр</p>
+                    <div class="footer__links-line"></div>
+                </a>
+                <a href="" class="footer__links-container">
+                    <p class="footer__links" >Карьера</p>
+                    <div class="footer__links-line"></div>
+                </a>
+                <a href="" class="footer__links-container">
+                    <p class="footer__links" >Контакты</p>
+                    <div class="footer__links-line"></div>
+                </a>
+                <a href="" class="footer__links-container">
+                    <p class="footer__links" >Карта сайта</p>
+                    <div class="footer__links-line"></div>
+                </a>
+            </nav>
+            <div class="footer__contact-container">
+                <div class="footer__contact-box">
+                    <img class="footer__contact-icon" src="./images/lock.svg" alt="">
+                    <div class="footer__contact-dot"></div>
+                    <a href="" class="footer__links-container">
+                        <p class="footer__links" >Корпоративня почта</p>
+                        <div class="footer__links-line"></div>
+                    </a>
+                </div>
+                <div class="footer__contact-box">
+                    <img class="footer__contact-icon" src="./images/lock.svg" alt="">
+                    <div class="footer__contact-dot"></div>
+                    <a href="" class="footer__links-container">
+                        <p class="footer__links" >Услуги ОЦО</p>
+                        <div class="footer__links-line"></div>
+                    </a>
+                </div>
+                <div class="footer__contact-box">
+                    <img class="footer__contact-icon" src="./images/lock.svg" alt="">
+                    <div class="footer__contact-dot"></div>
+                    <a href="" class="footer__links-container">
+                        <p class="footer__links" >Директум</p>
+                        <div class="footer__links-line"></div>
+                    </a>
+                </div>
+                <div class="footer__contact-box">
+                    <img class="footer__contact-icon" src="./images/lock.svg" alt="">
+                    <div class="footer__contact-dot"></div>
+                    <a href="" class="footer__links-container">
+                        <p class="footer__links" >СУЗ</p>
+                        <div class="footer__links-line"></div>
+                    </a>
+                </div>
+                <div class="header__language-container footer__language-container">
+                    <a href=""><img src="./images/search.svg" alt=""></a>
+                    <a href="" class="header__language-box footer__language-box">Ру</a>
+                    <a href="" class="header__language-box footer__language-box">En</a>
+                </div>
+            </div>
+            <div class="footer__info-container">
+                <a href="" class="footer__info-address">420107, г. Казань, ул. Островского, 84</a>
+                <a href="tel:89873453412" class="footer__info-number">+7 (843) 537-23-93</a>
+                <a href="mailto:mail@mail.com" class="footer__info-email">info@mirrico.com</a>
+                <a href="mailto:mail@mail.com" class="footer__info-contactUs">Написать нам</a>
+                <div class="footer__info-contact-container">
+                    <a class="footer__info-contact-blocks">
+                        <img src="./images/facebook.svg" alt=""></a>
+                    <a class="footer__info-contact-blocks">
+                        <img src="./images/ln.svg" alt=""></a>
+                    <a class="footer__info-contact-blocks">
+                        <img src="./images/vk.svg" alt=""></a>
+                    <a class="footer__info-contact-blocks">
+                        <img src="./images/youtube.svg" alt=""></a>
+                    <a class="footer__info-contact-blocks">
+                        <img src="./images/instagram.svg" alt=""></a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <hr class="footer__line">
+        <div class="footer__bottom">
+            <div class="container">
+                <div href="" class="footer__bottom-copy">&copy;2021 - ГК «Миррико»</div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
